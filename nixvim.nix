@@ -27,8 +27,8 @@ in
     #
     # ./config/plugins/kickstart/debug.nix
     # ./config/plugins/kickstart/indent-blankline.nix
-    # ./config/plugins/kickstart/lint.nix
-    # ./config/plugins/kickstart/autopairs.nix
+    ./config/plugins/kickstart/lint.nix
+    ./config/plugins/kickstart/autopairs.nix
     # ./config/plugins/kickstart/neo-tree.nix
     #
     # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
@@ -235,6 +235,12 @@ in
       key = "<Esc>";
       action = "<cmd>nohlsearch<CR>";
     }
+    # Open Mini-Files browser
+    {
+      mode = "n";
+      key = "-";
+      action.__raw = "function() _G.MiniFiles.open() end";
+    }
     # Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
     # for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
     # is not what someone will guess without a bit more experience.
@@ -344,7 +350,7 @@ in
         source = "if_many";
       };
       underline = {
-        severity.__raw = ''vim.diagnostic.severity.ERROR'';
+        severity.__raw = "vim.diagnostic.severity.ERROR";
       };
       signs.__raw = ''
         vim.g.have_nerd_font and {

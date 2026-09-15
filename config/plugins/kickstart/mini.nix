@@ -15,6 +15,9 @@
         n_lines = 500;
       };
 
+      files = {
+      };
+
       # Add/delete/replace surroundings (brackets, quotes, etc.)
       #
       # Examples:
