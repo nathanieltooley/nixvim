@@ -13,7 +13,7 @@
       bash
       ssh_config
       # sway
-      tmux
+      # tmux
 
       # Nix, Nixvim
       nix
