@@ -18,7 +18,7 @@
 
   keymaps = [
     {
-      key = "<leader>sb";
+      key = "<leader>a";
       action.__raw = ''function() require("arena").toggle() end'';
       options.desc = "Toggle Arena buffer viewer";
     }

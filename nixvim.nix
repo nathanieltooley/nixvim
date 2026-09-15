@@ -25,7 +25,7 @@ in
     ./config/plugins/kickstart/autopairs.nix
 
     ./config/plugins/custom/arena.nix
-    ./config/plugins/custom/hbac.nix
+    ./config/plugins/custom/early-retirement.nix
   ];
 
   colorschemes = {
