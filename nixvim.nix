@@ -27,6 +27,7 @@ in
     ./config/plugins/custom/arena.nix
     ./config/plugins/custom/early-retirement.nix
     ./config/plugins/custom/rustaceanvim.nix
+    ./config/plugins/custom/toggleterm.nix
   ];
 
   colorschemes = {
