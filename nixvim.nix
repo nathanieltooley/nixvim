@@ -28,6 +28,7 @@ in
     ./config/plugins/custom/early-retirement.nix
     ./config/plugins/custom/rustaceanvim.nix
     ./config/plugins/custom/toggleterm.nix
+    ./config/plugins/custom/lazygit.nix
   ];
 
   colorschemes = {

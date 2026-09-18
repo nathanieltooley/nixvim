@@ -106,6 +106,20 @@
           desc = "[ ] Find existing buffers";
         };
       };
+      "<leader>st" = {
+        mode = "n";
+        action = "treesitter";
+        options = {
+          desc = "[S]earch [T]reesitter";
+        };
+      };
+      "<leader>gd" = {
+        mode = "n";
+        action = "lsp_definitions";
+        options = {
+          desc = "[G]oto [D]efinition";
+        };
+      };
     };
     settings = {
       extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
@@ -163,6 +177,18 @@
       '';
       options = {
         desc = "[S]earch [N]eovim files";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>sc";
+      action.__raw = ''
+        function()
+          vim.lsp.buf.code_action()  
+        end
+      '';
+      options = {
+        desc = "[S]earch Lsp [C]ode Actions";
       };
     }
   ];
